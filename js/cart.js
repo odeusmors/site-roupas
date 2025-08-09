@@ -159,30 +159,30 @@ function generateWhatsAppMessage() {
   const cart = getCart();
   if (cart.length === 0) return '';
 
-  // Pega os dados do cliente do formulário
-  const name = document.getElementById('name')?.value || '';
-  const email = document.getElementById('email')?.value || '';
-  const phone = document.getElementById('phone')?.value || '';
-  const address = document.getElementById('address')?.value || '';
+  const name = document.getElementById('name')?.value.trim() || '';
+  const email = document.getElementById('email')?.value.trim() || '';
+  const phone = document.getElementById('phone')?.value.trim() || '';
+  const address = document.getElementById('address')?.value.trim() || '';
 
-  let message = `Olá, gostaria de fazer um pedido na The Clothing Noshi.\n\n`;
+  let message = '🛒 *Novo Pedido - The Clothing Noshi* 🛒\n\n';
 
-  message += `*Dados do cliente:*\n`;
+  message += '👤 *Cliente:*\n';
   message += `Nome: ${name}\n`;
   message += `Email: ${email}\n`;
   message += `Telefone: ${phone}\n`;
   message += `Endereço: ${address}\n\n`;
 
-  message += `*Itens do pedido:*\n`;
+  message += '🛍️ *Itens do pedido:*\n';
 
   let total = 0;
   cart.forEach(item => {
     const itemTotal = item.price * item.quantity;
     total += itemTotal;
-    message += `- ${item.name} | Tamanho: ${item.size} | Quantidade: ${item.quantity} | Preço unitário: R$${item.price.toFixed(2)} | Subtotal: R$${itemTotal.toFixed(2)}\n`;
+    message += `- ${item.name} | Tamanho: ${item.size} | Quantidade: ${item.quantity} | R$${item.price.toFixed(2)} cada | Subtotal: R$${itemTotal.toFixed(2)}\n`;
   });
 
-  message += `\n*Total do pedido: R$${total.toFixed(2)}*`;
+  message += `\n💰 *Total do pedido: R$${total.toFixed(2)}*\n\n`;
+  message += 'Obrigado pela preferência! 😊';
 
   return encodeURIComponent(message);
 }
@@ -208,7 +208,7 @@ function updateWhatsAppButtonState() {
   const formValid = validateForm();
 
   btn.disabled = !(cartHasItems && formValid);
-}
+  btn.classList.toggle('disabled', !btn.disabled);}
 
 document.addEventListener('DOMContentLoaded', () => {
   // ... seu código já existente
@@ -226,3 +226,25 @@ document.addEventListener('DOMContentLoaded', () => {
     updateWhatsAppButtonState();
   }
 });
+
+function validateForm() {
+  const form = document.getElementById('checkout-form');
+  if (!form) return false;
+
+  // Você pode ajustar para verificar campos específicos que são obrigatórios
+  const name = form.querySelector('#name')?.value.trim();
+  const email = form.querySelector('#email')?.value.trim();
+  const phone = form.querySelector('#phone')?.value.trim();
+  const address = form.querySelector('#address')?.value.trim();
+
+  if (!name || !email || !phone || !address) return false;
+
+  // Validação simples de email (pode melhorar)
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailRegex.test(email)) return false;
+
+  // Validação simples de telefone (pode ajustar conforme formato esperado)
+  if (phone.length < 8) return false;
+
+  return true;
+}

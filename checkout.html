@@ -17,19 +17,35 @@
     </div>
   </header>
 
-  <main class="cart-main">
-    <h2>Seu Carrinho</h2>
+ <main class="cart-main">
+  <h2>Seu Carrinho</h2>
 
-    <section class="cart-items"></section>
+  <section class="cart-items"></section>
 
-    <div class="cart-total-container">
-      Total: <span id="total-price">R$ 0,00</span>
-    </div>
+  <div class="cart-total-container">
+    Total: <span id="total-price">R$ 0,00</span>
+  </div>
 
-    <button id="checkout-btn" disabled>Finalizar Compra</button>
-    <button type="button" id="whatsapp-btn" disabled>Enviar pedido pelo WhatsApp</button>
+  <!-- Formulário de dados do cliente -->
+  <form id="checkout-form" class="checkout-form">
+    <h3>Dados do Cliente</h3>
 
-  </main>
+    <label for="name">Nome completo:</label>
+    <input type="text" id="name" name="name" required />
+
+    <label for="email">E-mail:</label>
+    <input type="email" id="email" name="email" required />
+
+    <label for="phone">Telefone:</label>
+    <input type="tel" id="phone" name="phone" required />
+
+    <label for="address">Endereço:</label>
+    <textarea id="address" name="address" rows="3" required></textarea>
+  </form>
+
+  <button id="checkout-btn" disabled>Finalizar Compra</button>
+  <button type="button" id="whatsapp-btn" disabled>Enviar pedido pelo WhatsApp</button>
+</main>
 
   <footer class="footer">
     <div class="footer-container">
