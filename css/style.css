@@ -5,6 +5,30 @@
     box-sizing: border-box;
 }
 
+.titulo-principal {
+    font-style: italic;
+    font-family: system-ui;
+    font-size: 2.9rem;
+    font-weight: 700;
+    color: #ffffff;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.banner {
+  width: 100%;
+  height: 60vh; /* altura: 60% da altura da tela, pode ajustar */
+  overflow: hidden;
+  position: relative;
+}
+
+.banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* cobre toda a área, mantendo proporção */
+  display: block;
+}
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
