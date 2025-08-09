@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Checkout - The Clothing Noshi</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="header-container">
+      <h1 class="logo">The Clothing Noshi</h1>
+      <nav>
+        <a href="index.html" aria-label="Voltar à loja">Loja</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="cart-main">
+    <h2>Seu Carrinho</h2>
+    <section class="cart-items" aria-live="polite" aria-relevant="additions removals"></section>
+
+    <div class="cart-total-container">
+      <strong>Total: R$ <span id="cart-total">0.00</span></strong>
+    </div>
+
+    <button id="checkout-btn" disabled aria-label="Finalizar compra">Finalizar Compra</button>
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="footer-container">
+      <section class="footer-section" aria-label="Contato">
+        <h3>Contato</h3>
+        <p>Email: <a href="mailto:contato@theclothingnoshi.com">contato@theclothingnoshi.com</a></p>
+        <p>Telefone: <a href="tel:+5511999999999">(11) 99999-9999</a></p>
+      </section>
+    </div>
+    <p class="text-copy">
+      &copy; 2025 The Clothing Noshi. Todos os direitos reservados.
+    </p>
+  </footer>
+
+  <script src="js/cart.js"></script>
+</body>
+</html>
