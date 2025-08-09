@@ -248,3 +248,18 @@ function validateForm() {
 
   return true;
 }
+
+const zoomableImages = document.querySelectorAll('.zoomable');
+const overlay = document.getElementById('image-overlay');
+const overlayImg = document.getElementById('overlay-img');
+
+zoomableImages.forEach(img => {
+  img.addEventListener('mouseenter', () => {
+    overlayImg.src = img.src;
+    overlay.style.display = 'flex';
+  });
+  img.addEventListener('mouseleave', () => {
+    overlay.style.display = 'none';
+  });
+});
+
