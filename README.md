@@ -1,2 +1,22 @@
-# site-roupas
-template-site-roupas
+# Site de Roupas
+
+Este é um projeto simples de um site de roupas masculinas com funcionalidades básicas de navegação e carrinho de compras.
+
+## Estrutura do projeto
+
+- `index.html` — Página principal do site.
+- `checkout.html` — Página do carrinho de compras.
+- `script.js` — Arquivo JavaScript com funcionalidades do site.
+- `style.css` (opcional) — Arquivo CSS para estilos (caso exista no projeto).
+
+## Funcionalidades
+
+- Exibição de produtos.
+- Adicionar produtos ao carrinho.
+- Visualizar e finalizar compra no checkout.
+
+## Como usar
+
+1. Clone este repositório:
+   ```bash
+   git clone https://github.com/seu-usuario/nome-do-repositorio.git
