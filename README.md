@@ -7,7 +7,8 @@ Este é um projeto simples de um site de roupas masculinas com funcionalidades b
 - `index.html` — Página principal do site.
 - `checkout.html` — Página do carrinho de compras.
 - `script.js` — Arquivo JavaScript com funcionalidades do site.
-- `style.css` (opcional) — Arquivo CSS para estilos (caso exista no projeto).
+- `style.css` — Arquivo CSS para estilos.
+- `imagens-atualizadas` - Contem todas imagens publicadas no site.
 
 ## Funcionalidades
 
@@ -20,3 +21,4 @@ Este é um projeto simples de um site de roupas masculinas com funcionalidades b
 1. Clone este repositório:
    ```bash
    git clone https://github.com/seu-usuario/nome-do-repositorio.git
+ 
