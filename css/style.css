@@ -454,9 +454,10 @@ a:focus {
 
 /* Mensagem quando carrinho vazio */
 .empty-state {
+    font-weight: 700;
     text-align: center;
-    font-size: 1.2rem;
-    color: #666666;
+    font-size: 1.4rem;
+    color: #ffffff;
     padding: 48px 0;
 }
 
