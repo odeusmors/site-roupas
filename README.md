@@ -20,5 +20,5 @@ Este é um projeto simples de um site de roupas masculinas com funcionalidades b
 
 1. Clone este repositório:
    ```bash
-   git clone https://github.com/seu-usuario/nome-do-repositorio.git
+   git clone https://github.com/odeusmors/site-roupas.git
  
